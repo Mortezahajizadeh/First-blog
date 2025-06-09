@@ -122,10 +122,6 @@ nav {
 #register form input {
   color: white;
 }
-#register form input {
-  background: transparent;
-  border: 1px;
-}
 #register form input::placeholder {
   font-family: "Vazirmatn", sans-serif;
 }

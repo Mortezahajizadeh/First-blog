@@ -3,20 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap"
       rel="stylesheet"
     />
-    <title>فرم ثبت نام ساده</title>
+    <title>صفحه فرود</title>
   </head>
   <body>
     <!-- Background video -->
     <div class="video-container">
       <video autoplay muted loop playsinline id="bgVideo">
-        <source src="/videos/artistic-video.mp4" type="video/mp4" />
+        <source
+          src="/public/assets/videos/artistic-video.mp4"
+          type="video/mp4"
+        />
       </video>
     </div>
     <!-- Navigation bar -->
@@ -27,23 +38,74 @@
             <a href="index.html">معرفی</a>
             <a href="index.html">مقاله ها</a>
             <a href="index.html"> پیشنهادات</a>
-            <a href="index.html">تماس با من</a>
+            <a href="index.html">ارتباط با من</a>
           </ul>
+          <form action="/api/contact.js" method="get" class="flex relative">
+            <input
+              type="search"
+              placeholder="جست و جو"
+              dir="rtl"
+              class="pl-10 pr-5 py-2 border border-white text-white rounded w-full bg-white/20 backdrop-blur-md"
+            />
+
+            <i
+              class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-white"
+            ></i>
+          </form>
+          <div class="flex space-x-6 text-3xl text-white">
+            <a
+              href="https://github.com"
+              target="_blank"
+              aria-label="GitHub"
+              class="hover:text-gray-900 transition-colors"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              aria-label="LinkedIn"
+              class="hover:text-blue-700 transition-colors"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://telegram.org"
+              target="_blank"
+              aria-label="Telegram"
+              class="hover:text-blue-500 transition-colors"
+            >
+              <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a
+              href="https://wa.me/yourphonenumber"
+              target="_blank"
+              aria-label="WhatsApp"
+              class="hover:text-green-500 transition-colors"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
           <button type="button" id="registerBtn">ثبت نام</button>
         </nav>
       </div>
       <!-- Lecture -->
       <div class="lecture">
-        <img src="image/morientez.png" alt="morientez.jpg" class="mori" />
+        <img
+          src="/public/assets/images/morientez.png"
+          alt="morientez.jpg"
+          class="mori"
+        />
         <p class="lecture-text">
-          درباره من <br> سلام! من به‌تازگی مسیرم را در دنیای مهندسی نرم‌افزار آغاز
-          کرده‌ام و با علاقه‌مندی زیاد در حال یادگیری و تمرین مهارت‌های مرتبط با
-          توسعه وب هستم. 🔧 مهارت‌ها: HTML، CSS Bootstrap 5، Tailwind CSS
-          JavaScript، jQuery React.js، TypeScript در حال حاضر، به دنبال فرصتی
-          برای همکاری با یک تیم یا شرکت هستم تا بتوانم در یک محیط واقعی تجربه
-          کسب کنم، یاد بگیرم و در کنار رشد فردی، ارزش‌آفرینی کنم. ✅ اگر به فردی
-          مشتاق، مسئولیت‌پذیر و در حال رشد نیاز دارید، خوشحال می‌شوم در مسیر
-          توسعه پروژه‌های شما سهیم باشم. از وقتی که برای خواندن این متن گذاشتید
+          درباره من <br />
+          سلام! من به‌تازگی مسیرم را در دنیای مهندسی نرم‌افزار آغاز کرده‌ام و با
+          علاقه‌مندی زیاد در حال یادگیری و تمرین مهارت‌های مرتبط با توسعه وب
+          هستم. 🔧 مهارت‌ها: HTML، CSS Bootstrap 5، Tailwind CSS JavaScript،
+          jQuery React.js، TypeScript در حال حاضر، به دنبال فرصتی برای همکاری با
+          یک تیم یا شرکت هستم تا بتوانم در یک محیط واقعی تجربه کسب کنم، یاد
+          بگیرم و در کنار رشد فردی، ارزش‌آفرینی کنم. ✅ اگر به فردی مشتاق،
+          مسئولیت‌پذیر و در حال رشد نیاز دارید، خوشحال می‌شوم در مسیر توسعه
+          پروژه‌های شما سهیم باشم. از وقتی که برای خواندن این متن گذاشتید
           متشکرم. براتون آرزوی موفقیت دارم!
           <br />
           <span dir="ltr" class="en-text">
@@ -89,11 +151,26 @@
       </div>
       <!-- Registeration form -->
       <div id="register">
-        <form action="#">
+        <form action="/api/contact.js" method="post">
           <label for="email">نام کاربری :</label>
-          <input type="text" placeholder="ایمیل یا شماره همراه" /><br /><br />
+          <input
+            type="text"
+            placeholder="ایمیل یا شماره همراه"
+            class="pl-10 pr-5 py-2 border border-white text-white rounded w-full bg-white/20 backdrop-blur-md"
+            <br
+          /><br />
           <label for="password">رمز عبور :</label>
-          <input type="text" placeholder="شامل 8 کاراکتر" /><br /><br />
+          <input
+            type="password"
+            placeholder="شامل 8 کاراکتر"
+            dir="rtl"
+            class="pl-10 pr-5 py-2 border border-white text-white rounded w-full bg-white/20 backdrop-blur-md"
+          />
+          <i
+            class="fa fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-white pointer-events-none"
+            aria-hidden="true"
+          ></i>
+          <br /><br />
           <input type="checkbox" />
           <label for="checkbox"
             >تمامی قوانین را مطالعه نموده و تأیید می نمایم.</label
@@ -103,6 +180,6 @@
       </div>
     </div>
     <!-- End of the blog -->
-    <script src="script.js"></script>
+    <script src="/scripts/main.js"></script>
   </body>
 </html>
