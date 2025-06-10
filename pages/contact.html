@@ -1,11 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <!-- Background video -->
+    <div class="video-container">
+      <video autoplay muted loop playsinline id="bgVideo">
+        <source
+          src="/public/assets/videos/artistic-video.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+      <!-- Registeration form -->
+    <div id="register">
+      <form action="/api/contact.js" method="post">
+        <label for="email">نام کاربری :</label>
+        <input
+          type="text"
+          placeholder="ایمیل یا شماره همراه"
+          class="pl-10 pr-5 py-2 border border-white text-white rounded w-full bg-white/20 backdrop-blur-md"
+          <br
+        /><br />
+        <label for="password">رمز عبور :</label>
+        <input
+          type="password"
+          placeholder="شامل 8 کاراکتر"
+          dir="rtl"
+          class="pl-10 pr-5 py-2 border border-white text-white rounded w-full bg-white/20 backdrop-blur-md"
+        />
+        <!-- <i
+            class="fa fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-white pointer-events-none"
+            aria-hidden="true"
+          ></i> -->
+        <br /><br />
+        <input type="checkbox" />
+        <label for="checkbox"
+          >تمامی قوانین را مطالعه نموده و تأیید می نمایم.</label
+        >
+      </form>
+      <button type="button" id="registerBtn">ثبت نام</button>
+    </div>
+  </body>
 </html>
